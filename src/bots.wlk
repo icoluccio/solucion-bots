@@ -19,11 +19,11 @@ class Tweet {
         return texto.size() > 15
     }
     method aQuienSeDirige(){
-        return texto.filter({palabra => palabra.startsWith("@")}).first()
+        return texto.filter({palabra => palabra.startsWith("@")})
     }
     
     method esALaNada(){
-        return self.aQuienSeDirige() == ""
+        return self.aQuienSeDirige().isEmpty()
     }
 }
 
